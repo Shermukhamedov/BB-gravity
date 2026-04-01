@@ -45,13 +45,13 @@ const Shape = ({ shapeObj }) => {
       }`}
       style={{ touchAction: 'none' }}
     >
-      <div className="flex flex-col gap-[2px] transform scale-90 md:scale-100 origin-bottom filter drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] md:-translate-y-0 pb-1">
+      <div className="flex flex-col gap-[1px] md:gap-[2px] transform scale-75 sm:scale-90 md:scale-100 origin-bottom filter drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] md:-translate-y-0 pb-1">
         {shape.map((row, rIdx) => (
-          <div key={rIdx} className="flex gap-[2px]">
+          <div key={rIdx} className="flex gap-[1px] md:gap-[2px]">
             {row.map((cell, cIdx) => (
               <div
                 key={cIdx}
-                className={`w-[9vw] h-[9vw] max-w-[36px] max-h-[36px] md:w-10 md:h-10 rounded-[3px] ${
+                className={`w-[8vw] h-[8vw] sm:w-[9vw] sm:h-[9vw] max-w-[28px] max-h-[28px] sm:max-w-[36px] sm:max-h-[36px] md:w-10 md:h-10 rounded-[2px] md:rounded-[3px] ${
                   cell === 1 ? 'bg-[#f4f4f4] shadow-[inset_0_0_8px_rgba(0,0,0,0.15)] ring-1 ring-white/30' : 'bg-transparent'
                 }`}
               />

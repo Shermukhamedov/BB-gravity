@@ -68,7 +68,7 @@ const Grid = () => {
     <div
       id="game-grid"
       ref={drop}
-      className={`grid grid-cols-8 gap-[1px] md:gap-[2px] bg-[#222] p-1 md:p-2 rounded-xl border-2 w-[95vw] max-w-[400px] md:max-w-[480px] aspect-square mx-auto shadow-2xl transition-colors ${
+      className={`grid grid-cols-8 gap-[1px] md:gap-[2px] bg-[#222] p-1 md:p-2 rounded-xl border-2 w-full aspect-square shadow-2xl transition-colors ${
         isOver && canDrop ? 'border-white/50 bg-[#333]' : 'border-[#333]'
       }`}
     >

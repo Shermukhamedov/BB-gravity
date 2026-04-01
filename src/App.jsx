@@ -18,10 +18,10 @@ function App() {
 
   return (
     <DndProvider backend={useTouch ? TouchBackend : HTML5Backend} options={useTouch ? { enableMouseEvents: true } : {}}>
-      <div className="min-h-screen bg-[#050505] text-white flex flex-col items-center justify-center p-4 selection:bg-white/20">
+      <div className="min-h-[100dvh] bg-[#050505] text-white flex flex-col items-center justify-center p-2 md:p-4 pb-6 md:pb-8 selection:bg-white/20">
         
         {/* Header Section */}
-        <header className="w-full max-w-md flex justify-between items-center mb-8 px-2">
+        <header className="w-full max-w-md flex justify-between items-center mb-4 md:mb-8 px-1 md:px-2">
           <div className="flex items-center gap-2">
             <TrophyOutlined className="text-2xl text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]" />
             <div className="flex flex-col">
@@ -54,7 +54,7 @@ function App() {
         </header>
 
         {/* Game Area */}
-        <main className="relative flex flex-col items-center select-none shadow-[0_0_120px_rgba(255,255,255,0.03)] bg-[#0a0a0a] p-6 rounded-3xl border border-[#222]">
+        <main className="relative flex flex-col items-center w-[95vw] max-w-[400px] md:max-w-[480px] select-none shadow-[0_0_120px_rgba(255,255,255,0.03)] bg-[#0a0a0a] p-2 md:p-4 rounded-2xl md:rounded-3xl border border-[#222]">
           <Grid />
           
           {/* Game Over Overlay */}
