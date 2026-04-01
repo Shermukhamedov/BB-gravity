@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border-grid: #333333;
+  --color-cell-empty: #1a1a1a;
+  --color-cell-filled: #ffffff;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
