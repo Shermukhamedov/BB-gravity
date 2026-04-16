@@ -285,6 +285,25 @@ const Sudoku = ({ onBackToMenu }) => {
           )}
         </div>
 
+        {/* Mobile Number Pad */}
+        <div className="mt-6 grid grid-cols-5 gap-2 md:hidden">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
+            <button
+              key={num}
+              onClick={() => handleNumberInput(num)}
+              className="w-14 h-14 bg-[#1a1a1a] border border-[#333] rounded-lg text-xl font-bold hover:bg-[#2a2a2a] active:bg-[#333] transition-colors"
+            >
+              {num}
+            </button>
+          ))}
+          <button
+            onClick={() => handleNumberInput(0)}
+            className="w-14 h-14 bg-[#1a1a1a] border border-[#333] rounded-lg text-lg font-bold hover:bg-[#2a2a2a] active:bg-[#333] transition-colors flex items-center justify-center"
+          >
+            ⌫
+          </button>
+        </div>
+
         {gameWon && (
           <div className="absolute inset-0 z-50 bg-black/80 backdrop-blur-sm rounded-2xl flex flex-col items-center justify-center animate-in fade-in duration-300">
             <h2 className="text-4xl font-black mb-2 text-white drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]">
@@ -305,6 +324,7 @@ const Sudoku = ({ onBackToMenu }) => {
       <div className="mt-6 text-center text-gray-500 text-sm max-w-md">
         <p>Click a cell and type a number (1-9) using your keyboard.</p>
         <p className="mt-1">Press Delete or Backspace to clear a cell.</p>
+        <p className="mt-1 hidden md:block">On mobile, use the number pad below the grid.</p>
         <p className="mt-1">Fill the grid so each row, column, and 3x3 box contains 1-9.</p>
         {(showErrors || showCorrect) && (
           <div className="mt-3 p-2 bg-gray-800 rounded-lg">
